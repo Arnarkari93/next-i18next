@@ -22,7 +22,7 @@ export const appWithTranslation = (
   configOverride: UserConfig | null = null,
 ) => {
   const AppWithTranslation = (props: AppProps) => {
-    let i18n: I18NextClient | null = null
+    let i18n: I18NextClient | null = globalI18n
     let locale = null
 
     if (props?.pageProps?._nextI18Next) {
